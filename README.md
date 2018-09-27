@@ -40,6 +40,8 @@ There are predetermined test you will need to make pass.
 1. invoke with no params.
 1. invoke with a non-numeric param.
 
+### Debugging
+
 To manually invoke `nestedForLoops` open the browsers console. `nestedForLoops` is available on the global scope and can be invoked directly.
 
 ## Console: ⌥⌘J (Mac) or Ctrl + Shift + J (Windows/Linux)
