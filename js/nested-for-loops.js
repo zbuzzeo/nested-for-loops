@@ -4,10 +4,31 @@
  * @param {number} [width=depth] 
  * @returns {string}
  */
-function nestedForLoops (depth, width = depth) {
-  let result = "\n";
+function nestedForLoops( depth, width = depth ) {
+    let result = "\n";
+    let x = 0;
+    let y = 0;
+    console.log( `depth: ${ depth }\nwidth: ${ width }` );
+    for ( let i = 0; i < depth; i++ ) {
+        for ( let j = 0; j < width; j++ ) {
+            x = j;
+            y = i;
+            result += `{x:${ x }, y:${ y }}`;
+            if ( j + 1 < width ) {
+                result += ', ';
+            } else {
+                result += '\n';
+            }
+            console.log( `%cx: ${ x }, y: ${ y }`, 'color: cornflowerblue; font-size: 1.2em;' );
+        }
+    }
+    console.log(`FINISHED`);
+    console.log( `%cRESULT: ${ result }`, 'color: orange; font-size: 1.2em;' );
 
-  // Write code here
+    // Error handling:
+    if ( !depth || isNaN( depth ) ) {
+        return '';
+    } else { return result };
 
 };
 
